@@ -1,5 +1,11 @@
-<ul>
+<div class="container">
+  <h1>Restaurants</h1>
+  <ul style="list-style: none;">
   <% @restaurants.each do |restaurant| %>
-    <li><%= restaurant.name %></li>
+    <li><%= link_to restaurant.name, new_restaurant_path(restaurant) %></li>
+    <li><%= restaurant.address %></li>
+    <li><%= restaurant.phone_number %></li>
+    <li><%= restaurant.category %></li>
   <% end %>
-</ul>
+  </ul>
+</div>
